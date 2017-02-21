@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Roboto:400,500" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/flexible-bootstrap-carousel.css" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/FitText.js-master/jquery.fittext.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+		<script type="text/javascript" src="js/flexible-bootstrap-carousel.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		
+		<title>Flexible Bootstrap Carousel</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<div class="container">
+				<h1>Flexible Bootstrap Carousel</h1>
+			</div>
+		</header>
+		
+		<section class="examples">
+			<div class="container">
+				<div class="carousel-example">
+					<h2>The carousel with simple content of the items</h2>
+					<!-- FLEXIBLE BOOTSTRAP CAROUSEL -->
+					<div id="simple-content-carousel" class="carousel flexible slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+						
+						<div class="items">
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item1.jpg"/>
+							</div>
+						
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item2.jpg"/>
+							</div>
+							
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item3.jpg"/>
+							</div>
+							
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item4.jpg"/>
+							</div>
+							
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item5.jpg"/>
+							</div>
+							
+							<div class="flex-item">
+								<img class="img-responsive" src="images/item6.jpg"/>
+							</div>
+						</div>
+						
+						<div class="carousel-inner" role="listbox">
+							
+						</div>
+						
+						<a class="left carousel-control" href="#simple-content-carousel" role="button" data-slide="prev">
+							<span class="fa fa-angle-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#simple-content-carousel" role="button" data-slide="next">
+							<span class="fa fa-angle-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				
+				<div class="carousel-example">
+					<h2>The carousel with complicated content of the items</h2>
+					<!-- FLEXIBLE BOOTSTRAP CAROUSEL -->
+					<div id="complicated-content-carousel" class="carousel flexible slide" data-ride="carousel" data-interval="false" data-wrap="false">
+								
+						<div class="items">
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										<div class="size">
+											<div class="header"><span class="number">Size</span> <span class="fa fa-angle-down"></span></div>
+											<div class="options">
+												<div class="option">S</div>
+												<div class="option">M</div>
+												<div class="option">L</div>
+												<div class="option">XL</div>
+											</div>
+										</div>
+									</div>
+									<div class="good-top-right">
+										<div class="choose-color">
+											<div class="blue"></div>
+											<div class="yellow"></div>
+											<div class="black"></div>
+										</div>
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/good1/black.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>T-shirt</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">5,00&#36;</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										<div class="size">
+											<div class="header"><span class="number">Size</span> <span class="fa fa-angle-down"></span></div>
+											<div class="options">
+												<div class="option">S</div>
+												<div class="option">M</div>
+												<div class="option">L</div>
+												<div class="option">XL</div>
+											</div>
+										</div>
+									</div>
+									<div class="good-top-right">
+										
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/jeans.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>Jeans for men</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">30,00&#36;</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										10 litres
+									</div>
+									<div class="good-top-right">
+										
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/good3.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>Backpack</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">60,00&#36;</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										<div class="size">
+											<div class="header"><span class="number">Size</span> <span class="fa fa-angle-down"></span></div>
+											<div class="options">
+												<div class="option">S</div>
+												<div class="option">M</div>
+												<div class="option">L</div>
+												<div class="option">XL</div>
+											</div>
+										</div>
+									</div>
+									<div class="good-top-right">
+										<div class="choose-color">
+											<div class="dark-blue-women"></div>
+											<div class="light-blue-women"></div>
+										</div>
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/jeans-girls/dark-blue-women.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>Jeans for women</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">50,00&#36;</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										<div class="size">
+											<div class="header"><span class="number">Size</span> <span class="fa fa-angle-down"></span></div>
+											<div class="options">
+												<div class="option">S</div>
+												<div class="option">M</div>
+												<div class="option">L</div>
+												<div class="option">XL</div>
+											</div>
+										</div>
+									</div>
+									<div class="good-top-right">
+										
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/shirt-women.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>Women's shirt</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">30,00&#36;</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="flex-item">
+								<div class="good-top">
+									<div class="good-top-left">
+										2 litres
+									</div>
+									<div class="good-top-right">
+										
+									</div>
+								</div>
+								<div class="good-image">
+									<img src="images/womens-bag.png">
+								</div>
+								<div class="good-bottom">
+									<div class="good-bottom-left">
+										<a href="#"><h4>Shoulder bag</h4></a>
+									</div>
+									<div class="good-bottom-right">
+										<p class="price">60,00&#36;</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-inner" role="listbox">
+							
+						</div>
+	
+						
+						<div class="index"></div>
+						<a class="left carousel-control" href="#complicated-content-carousel" role="button" data-slide="prev">
+							<span class="fa fa-angle-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#complicated-content-carousel" role="button" data-slide="next">
+							<span class="fa fa-angle-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
