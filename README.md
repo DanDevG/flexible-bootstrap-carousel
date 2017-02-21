@@ -1,7 +1,7 @@
 flexible-bootstrap-carousel
 ===========================
 
-Bootstrap Flexible Bootstrap Carousel plugin
+Flexible Bootstrap Carousel plugin
 
 This plugin makes possible showing different numbers of items in your Bootstrap carousel depending on the window width. In fact it creates several columns in each item of a Bootstrap carousel. Then it is watching if the width of a browser window is changing and is adjusting number of columns in each item respectively to window's size (in this version of the plugin - from 1 through 3 columns).
 
