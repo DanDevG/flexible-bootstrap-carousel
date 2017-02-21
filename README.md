@@ -58,4 +58,5 @@ Then you need to create inside of the carousel a container with class name of .i
 	</div>
 
 Container that has class name of .carousel-inner can be empty.
+
 You've done it! Enjoy of your page with built in flexible Bootstrap carousel.
