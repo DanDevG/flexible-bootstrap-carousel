@@ -1,3 +1,18 @@
+/*!
+
+Flexible Bootstrap Carousel v0.4
+
+Copyright (c) 2017 Dan Dev
+
+Released under the MIT license
+https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
+
+*/
+
+
+
+
+
 /* global $ */
 /* global CustomEvent */
 
