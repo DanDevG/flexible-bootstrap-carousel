@@ -13,6 +13,23 @@ This plugin makes possible showing different numbers of items in your Bootstrap 
 <script type="text/javascript" src="js/bootstrap.js"></script>
 ```
 
+##Installing
+You can download flexible-bootstrap-carousel.js and flexible-bootstrap-carousel.css manually to you project or you can install with npm:
+
+```shall
+
+npm install flexible-bootstrap-carousel
+
+```
+
+or bower:
+
+```shall
+
+bower install flexible-bootstrap-carousel
+
+```
+
 ##Usage
 
 First of all, you'll want to link the flexible-bootstrap-carousel.js and flexible-bootstrap-carousel.css files to your web-page:

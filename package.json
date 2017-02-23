@@ -1,0 +1,26 @@
+{
+  "name": "flexible-bootstrap-carousel",
+  "version": "0.2.1",
+  "description": "Flexible Bootstrap Carousel plugin",
+  "main": "flexible-bootstrap-carousel.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanDevG/flexible-bootstrap-carousel.git"
+  },
+  "author": "Dan Dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanDevG/flexible-bootstrap-carousel/issues"
+  },
+  "homepage": "https://github.com/DanDevG/flexible-bootstrap-carousel#readme",
+  "dependencies": {
+    "jquery": ">=1.11.1",
+    "bootstrap": ">=3.0.0"
+  }
+}
