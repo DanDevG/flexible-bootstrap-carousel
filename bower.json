@@ -1,7 +1,11 @@
 {
   "name": "flexible-bootstrap-carousel",
-  "main": "flexible-bootstrap-carousel.js",
+  "main": [
+    "flexible-bootstrap-carousel.js",
+    "flexible-bootstrap-carousel.css"
+  ],
   "homepage": "https://github.com/DanDevG/flexible-bootstrap-carousel",
+  "version": "0.2.1",
   "authors": [
     "Dan Dev <dan.dev.mail@gmail.com>"
   ],
@@ -13,9 +17,7 @@
   },
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "**/.*",
     "examples",
     "README.md",
     "*.log",
