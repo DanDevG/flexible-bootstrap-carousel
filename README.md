@@ -15,11 +15,21 @@ This plugin makes possible showing different numbers of items in your Bootstrap 
 
 ##Usage
 
-Firs of all, you'll want to include js and css files into your html code:
+First of all, you'll want to link the flexible-bootstrap-carousel.js and flexible-bootstrap-carousel.css files to your web-page:
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/flexible-bootstrap-carousel.css" />
 <script type="text/javascript" src="js/flexible-bootstrap-carousel.js"></script>
+```
+
+Instead of linking the flexible-bootstrap-carousel.css file to your web-page you can include in your main style sheet the next css rule:
+
+```css
+
+.carousel.flexible .items {
+	display: none;
+}
+
 ```
 
 To initiate the plugin you just need to add a *.flexible* class name to some Bootstrap carousel in your html code 

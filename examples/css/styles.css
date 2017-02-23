@@ -44,6 +44,10 @@
 		padding: 20px 0 50px 0;
 	}
 	
+	.carousel.flexible .items {
+		display: none;
+	}
+	
 	#complicated-content-carousel .carousel-control {
 		position: absolute;
 		top: -20px;
