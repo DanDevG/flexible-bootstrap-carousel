@@ -21,6 +21,14 @@
 		font-weight: 500;
 	}
 	
+	.link {
+		margin-top: 40px;
+	}
+	
+	p {
+		font-size: 20px;
+	}
+	
 	/* Aligning */
 	.left {
 		text-align: left;
