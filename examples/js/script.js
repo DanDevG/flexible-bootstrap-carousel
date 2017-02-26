@@ -9,7 +9,7 @@ $(window).load(function() {
 		adjustIndexesOfCarousel();
 	});
 	
-	adjustAllCarousels();
+	$(".carousel.flexible").flexCarousel();
 });
 
 function sizeChoosing() {

@@ -3,7 +3,12 @@
 Flexible Bootstrap Carousel plugin
 
 ##Introducing
-This plugin makes possible showing different numbers of items in your Bootstrap carousel depending on the browser's window width. In fact it creates several columns in each item of a Bootstrap carousel. Then it is watching if the width of a browser window is changing and is adjusting number of columns in each item respectively to window's size (in this version of the plugin - from 1 through 3 columns).
+This plugin makes possible showing different numbers of entities in each item of your Bootstrap carousel depending on the browser's window width.
+The content of each entity might be either simple (an image, for example) 
+or complicated (as a product description with several images, selectors of sizes, colors etc... in internet-store).
+Actually the plugin creates several columns in each item of a Bootstrap carousel.
+Then it is watching if the width of a browser window is changing and is adjusting number of columns in each item respectively to window's size 
+(in this version of the plugin - from 1 through 3 columns).
 To see the plugin in action visit this [showcase](http://flexcarousel.surge.sh)
 
 ##Dependencies
@@ -50,7 +55,8 @@ Instead of linking the flexible-bootstrap-carousel.css file to your web-page you
 
 ```
 
-To initiate the plugin you just need to add a *.flexible* class name to some Bootstrap carousel in your html code 
+To initiate the plugin you might add some additional class name to those Bootstrap carousels which you want to turn into flexible ones.
+Suppose, it is a *.flexible* class name:
 
 ```html
 <div class="carousel flexible slide" data-ride="carousel" data-interval="5000" data-wrap="true">
@@ -60,7 +66,8 @@ To initiate the plugin you just need to add a *.flexible* class name to some Boo
 </div>
 ```
 
-Then you need to create inside of the carousel a container with class name of *.items*. You also should put the items, which you want to appear in the carousel, into this container (each of them should have class of *.item*).
+Then you need to create inside of the carousel a container with class name of *.items*. You also should put the items, which you want to appear in the carousel, 
+into this container (each of them should have class of *.item*).
 
 ```html
 <div class="carousel flexible slide" data-ride="carousel" data-interval="5000" data-wrap="true">
@@ -108,7 +115,28 @@ Then you need to create inside of the carousel a container with class name of *.
 
 You can leave empty container with class name of *.carousel-inner*.
 
+Finally, you just have to add next code to your JavaScript file:
+
+```javascript
+
+$(".carousel.flexible").flexCarousel();
+
+```
+
 You've done it! Enjoy of your page with built in flexible Bootstrap carousel.
+
+##Adjusting contents of the entities of the carousel
+
+If the content of the entities of your carusel is complicated enough, you might want to adjust it each time when the carousel changes number of elements inside each item.
+To do so you can use the event *aCarouselHasBeenAdjusted*, that is triggered each time when the carousel has been adjusted:
+
+```javascript
+
+$(".carousel.flexible").on("aCarouselHasBeenAdjusted", function() {
+	// do something
+});
+
+```
 
 ##License
 
