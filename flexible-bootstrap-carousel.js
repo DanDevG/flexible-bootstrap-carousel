@@ -1,6 +1,6 @@
 /*!
 
-Flexible Bootstrap Carousel v0.3.3
+Flexible Bootstrap Carousel v0.3.6
 
 Copyright (c) 2017 Dan Dev
 

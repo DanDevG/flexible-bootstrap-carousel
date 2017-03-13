@@ -1,6 +1,6 @@
 /*!
 
-Flexible Bootstrap Carousel v0.3.3
+Flexible Bootstrap Carousel v0.3.6
 
 Copyright (c) 2017 Dan Dev
 
@@ -14,8 +14,12 @@ https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
 }
 
 .carousel.flexible .carousel-inner .item-inner-container {
+	display: -webkit-box;
+    display: -ms-flexbox;
 	display: flex;
 	flex-wrap: nowrap;
+	-webkit-box-pack: justify;
+          -ms-flex-pack: justify;
 	justify-content: space-between;
 	flex-grow: 0;
 	flex-shrink: 0;
