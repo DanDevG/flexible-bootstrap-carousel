@@ -9,7 +9,14 @@ $(window).load(function() {
 		adjustIndexesOfCarousel();
 	});
 	
-	$(".carousel.flexible").flexCarousel();
+	$(".carousel.flexible.custom").flexCarousel({
+		"320-500": 1,
+		"501-768": 2,
+		"769-991": 4,
+		"992-20000": 5
+	});
+	
+	$(".carousel.flexible.default").flexCarousel();
 });
 
 function sizeChoosing() {

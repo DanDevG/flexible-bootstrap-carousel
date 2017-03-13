@@ -8,7 +8,7 @@ The content of each entity might be either simple (an image, for example)
 or complicated (as a product description with several images, selectors of sizes, colors etc... in internet-store).
 Actually the plugin creates several columns in each item of a Bootstrap carousel.
 Then it is watching if the width of a browser window is changing and is adjusting number of columns in each item respectively to window's size 
-(in this version of the plugin - from 1 through 3 columns).
+(by default - from 1 through 3 columns, but you can set up number of entities in each item on your own).
 To see the plugin in action visit this [showcase](http://flexcarousel.surge.sh)
 
 ##Dependencies
@@ -45,16 +45,6 @@ First of all, you'll want to link the flexible-bootstrap-carousel.js and flexibl
 <script type="text/javascript" src="js/flexible-bootstrap-carousel.js"></script>
 ```
 
-Instead of linking the flexible-bootstrap-carousel.css file to your web-page you can include in your main style sheet the next css rule:
-
-```css
-
-.carousel.flexible .items {
-	display: none;
-}
-
-```
-
 To initiate the plugin you might add some additional class name to those Bootstrap carousels which you want to turn into flexible ones.
 Suppose, it is a *.flexible* class name:
 
@@ -70,7 +60,7 @@ Then you need to create inside of the carousel a container with class name of *.
 into this container (each of them should have class of *.item*).
 
 ```html
-<div class="carousel flexible slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+<div class="carousel flexible custom slide" data-ride="carousel" data-interval="5000" data-wrap="true">
 	<div class="items">
 		<div class="flex-item">
 			<img class="img-responsive" src="images/item1.jpg"/>
@@ -119,11 +109,48 @@ Finally, you just have to add next code to your JavaScript file:
 
 ```javascript
 
-$(".carousel.flexible").flexCarousel();
+$(".carousel.flexible.default").flexCarousel();
 
 ```
 
 You've done it! Enjoy of your page with built in flexible Bootstrap carousel.
+
+##Extra customization
+If you want to set up more than one carousel with different settings on the same page, you also need to add some another classes (or id) to each of the carousel
+to make it possible to differentiate them. For example, you can add a *.default* class name if you do not want to change default settings
+and a *.custom* class name if you want to set up your own number of columns for each screen size:
+
+```html
+<div class="carousel flexible default slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+	
+	//some stuff inside the carousel
+	
+</div>
+
+<div class="carousel flexible custom slide" data-ride="carousel" data-interval="5000" data-wrap="true">
+	
+	//some stuff inside the carousel
+	
+</div>
+```
+
+If you want to set up number of entities inside of each item of a carousel on your own, you can do it by giving an object with your settings to *.flexCarousel* function.
+Inside the object you put properties (ranges of screen sizes) in quotes, and give a value (number of columns) to each of the properities.
+For example, if you want to appear 2 entities inside of each item of a carousel when screen size is between 320px and 768px, but 5 items when
+screen size is more than 768px, you should write the next code:
+
+```javascript
+
+$(".carousel.flexible").flexCarousel({
+	"320-768": 2,
+	"769-20000": 5
+});
+
+```
+
+Pay attention to two things in the code above. **First** - you should not place whitespaces inside property names. **Second** - if you want, for example, 
+5 columns on screen size of 769px and above, you just write *"769-20000": 5*. The second number should be large enough (in this case it is 20000) 
+to ensure that any of existing devices can't reach it.
 
 ##Adjusting contents of the entities of the carousel
 

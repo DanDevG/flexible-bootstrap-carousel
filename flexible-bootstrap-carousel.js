@@ -15,10 +15,15 @@ https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
 
 /* global jQuery */
 /* global CustomEvent */
+/* global setting */
 
 (function($, window) {
 	
-	$.fn.flexCarousel = function() {
+	$.fn.flexCarousel = function(options) {
+		var settings = $.extend({
+			
+		}, options);
+		
 		return this.each(function() {
 			var carousel = $(this);
 			
@@ -35,24 +40,54 @@ https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
 					items++;
 				});
 				
-				var item_width = ($(window).width() > 991 && $(window).width() < 1200) ? 300 : 319; 
+				var item_width = 0;
+				var window_width = $(window).width();
+				var carousel_width = $(carousel).width();
+				var is_in_range = undefined;
+				var items_for_the_range = undefined;
 				
-				adjustCarousel($(carousel), items, item_width);
+				if (!(Object.keys(settings).length === 0)) {
+					for (setting in settings) {
+						var num1 = parseInt(setting.slice(0, setting.indexOf("-")));
+						var num2 = parseInt(setting.slice(setting.indexOf("-") + 1, setting.length));
+						
+						if (window_width >= num1 && window_width <= num2) {
+							is_in_range = true;
+							items_for_the_range = settings[setting];
+						}
+					}
+				}
+				
+				
+				if (!(Object.keys(settings).length === 0) && is_in_range && !(items_for_the_range === undefined)) {
+					item_width = Math.floor(carousel_width / items_for_the_range);
+					
+				} else {
+					item_width = ($(window).width() > 991 && $(window).width() < 1200) ? 300 : 319;
+				}
+				
+				adjustCarousel($(carousel), items, item_width, items_for_the_range);
 			}
 			
 			
 			
-			function adjustCarousel(carousel, num_of_items, item_width) {
+			function adjustCarousel(carousel, num_of_items, item_width, items_for_the_range) {
 				var carousel_width = $(carousel).width();
 				var columns_in_item = Math.floor(carousel_width / item_width);
 				
-				if (columns_in_item > 3)
-				{
-					columns_in_item = 3;
-				}
-				else if (columns_in_item < 1)
-				{
-					columns_in_item = 1;
+				if (items_for_the_range === undefined) {
+					columns_in_item = Math.floor(carousel_width / item_width);
+					
+					if (columns_in_item > 3)
+					{
+						columns_in_item = 3;
+					}
+					else if (columns_in_item < 1)
+					{
+						columns_in_item = 1;
+					}
+				} else {
+					columns_in_item = items_for_the_range;
 				}
 				
 				var number_of_items = Math.ceil(num_of_items / columns_in_item);
@@ -64,27 +99,56 @@ https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
 				var current_item = 0;
 				var number_of_columns = String(Math.round(12 / columns_in_item));
 				
-				for (var i = 0; i < number_of_items; i++)
-				{
-					var item = "<div class='item'><div class='row'>";
-					
-					var j = 0;
-					
-					for ( ; j < columns_in_item; j++)
+				if (!(items_for_the_range === undefined)) {
+					for (var i = 0; i < number_of_items; i++)
 					{
-						var item_body = (current_item <= length_of_$items - 1) ? $($items[current_item]).clone().wrap("<p>").parent().html() : "";
-						item += "<div class='col-xs-" + number_of_columns + "'>" + item_body + "</div>";
+						var item = "<div class='item'><div class='item-inner-container'>";
 						
-						current_item++;
+						var j = 0;
+						
+						for ( ; j < columns_in_item; j++)
+						{
+							var item_body = (current_item <= length_of_$items - 1) ? $($items[current_item]).clone().wrap("<p>").parent().html() : "";
+							
+							if (item_body !== "") {
+								item += "<div class='item-inner'>" + item_body + "</div>";
+							}
+							
+							current_item++;
+						}
+						
+						item += "</div></div>";
+						
+						$(carousel).find(".carousel-inner").append(item);
+						
+						if (i == 0)
+						{
+							$(carousel).find(".carousel-inner .item").addClass("active");
+						}
 					}
-					
-					item += "</div></div>";
-					
-					$(carousel).find(".carousel-inner").append(item);
-					
-					if (i == 0)
+				} else {
+					for (var i = 0; i < number_of_items; i++)
 					{
-						$(carousel).find(".carousel-inner .item").addClass("active");
+						var item = "<div class='item'><div class='row'>";
+						
+						var j = 0;
+						
+						for ( ; j < columns_in_item; j++)
+						{
+							var item_body = (current_item <= length_of_$items - 1) ? $($items[current_item]).clone().wrap("<p>").parent().html() : "";
+							item += "<div class='col-xs-" + number_of_columns + "'>" + item_body + "</div>";
+							
+							current_item++;
+						}
+						
+						item += "</div></div>";
+						
+						$(carousel).find(".carousel-inner").append(item);
+						
+						if (i == 0)
+						{
+							$(carousel).find(".carousel-inner .item").addClass("active");
+						}
 					}
 				}
 				
@@ -115,6 +179,13 @@ https://github.com/DanDevG/flexible-bootstrap-carousel/master/LICENSE.md
 								$items.eq(0).addClass("left");
 								$items.eq(1).addClass("center");
 								$items.eq(2).addClass("right");
+							default:
+								$items.eq(0).addClass("left");
+								$items.eq(number_of_items - 1).addClass("right");
+								
+								for (var i = 1; i < number_of_items - 1; i++) {
+									$items.eq(i).addClass("center");
+								}
 						}
 					});
 					
