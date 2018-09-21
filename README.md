@@ -2,11 +2,11 @@
 
 Flexible Bootstrap Carousel plugin
 
-##Introducing
+## Introducing
 This plugin makes possible showing different numbers of entities in each item of your Bootstrap carousel depending on the browser's window width.
 The content of each entity might be either simple (an image, for example) 
-or complicated (as a product description with several images, selectors of sizes, colors etc... in internet-store).
-Actually the plugin creates several columns in each item of a Bootstrap carousel.
+or complicated (as a product description with several images, selectors of sizes, colors etc... in an internet-store).
+Actually, the plugin creates several columns in each item of a Bootstrap carousel.
 Then it is watching if the width of a browser window is changing and is adjusting number of columns in each item respectively to window's size 
 (by default - from 1 through 3 columns, but you can set up number of entities in each item on your own).
 To see the plugin in action visit this [showcase](http://flexcarousel.surge.sh)
@@ -115,7 +115,7 @@ $(".carousel.flexible.default").flexCarousel();
 
 You've done it! Enjoy of your page with built in flexible Bootstrap carousel.
 
-##Extra customization
+## Extra customization
 If you want to set up more than one carousel with different settings on the same page, you also need to add some another classes (or id) to each of the carousel
 to make it possible to differentiate them. For example, you can add a *.default* class name if you do not want to change default settings
 and a *.custom* class name if you want to set up your own number of columns for each screen size:
@@ -152,7 +152,7 @@ Pay attention to two things in the code above. **First** - you should not place 
 5 columns on screen size of 769px and above, you just write *"769-20000": 5*. The second number should be large enough (in this case it is 20000) 
 to ensure that any of existing devices can't reach it.
 
-##Adjusting contents of the entities of the carousel
+##  Adjusting contents of the entities of the carousel
 
 If the content of the entities of your carusel is complicated enough, you might want to adjust it each time when the carousel changes number of elements inside each item.
 To do so you can use the event *aCarouselHasBeenAdjusted*, that is triggered each time when the carousel has been adjusted:
