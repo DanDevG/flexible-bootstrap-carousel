@@ -1,4 +1,4 @@
-#flexible-bootstrap-carousel
+# flexible-bootstrap-carousel
 
 Flexible Bootstrap Carousel plugin
 
@@ -11,7 +11,7 @@ Then it is watching if the width of a browser window is changing and is adjustin
 (by default - from 1 through 3 columns, but you can set up number of entities in each item on your own).
 To see the plugin in action visit this [showcase](http://flexcarousel.surge.sh)
 
-##Dependencies
+## Dependencies
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -19,7 +19,7 @@ To see the plugin in action visit this [showcase](http://flexcarousel.surge.sh)
 <script type="text/javascript" src="js/bootstrap.js"></script>
 ```
 
-##Installing
+## Installing
 You can download flexible-bootstrap-carousel.js and flexible-bootstrap-carousel.css manually to you project or you can install with npm:
 
 ```shall
@@ -36,7 +36,7 @@ bower install flexible-bootstrap-carousel
 
 ```
 
-##Usage
+## Usage
 
 First of all, you'll want to link the flexible-bootstrap-carousel.js and flexible-bootstrap-carousel.css files to your web-page:
 
@@ -165,6 +165,6 @@ $(".carousel.flexible").on("aCarouselHasBeenAdjusted", function() {
 
 ```
 
-##License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/DanDevG/flexible-bootstrap-carousel/blob/master/LICENSE.md) file for details
